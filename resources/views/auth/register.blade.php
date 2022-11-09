@@ -48,7 +48,7 @@
                                 <input type="submit" name="signup" id="signup" class="form-submit" value="Register"/>
                             </div>
                             <div>
-                                <a href="#" class="signuip-image-link">I am already member</a>
+                                <a href="{{ route('login') }}" class="signuip-image-link">I am already member</a>
                             </div>
                         </form>
                     </div>
