@@ -24,7 +24,14 @@
                     <div class="links col-lg-2 mr-3">
                         <ul>
                             {{-- <li id="user">{{ Auth::user()->name }}</li> --}}
-                            <a href="/login"><li class="btn btn-primary">Logout</li></a>
+                            {{-- <a href="/login"><li class="btn btn-primary">Logout</li></a> --}}
+
+                            <a href="route('logout')" class="btn btn-primary" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <span>Logout</span>
+                            </a>
+                            <form id="logout-form" action="{{route('logout')}}" method="post" class="d-none">
+                                @csrf
+                            </form>
                         </ul>
                     </div>
                 </div>

@@ -23,6 +23,7 @@ Route::middleware('auth')->group(function(){
     Route::get('/token/create', [DashboardController::class, 'showTokenForm'])->name('token.showForm');
     Route::post('/token/create', [DashboardController::class, 'createToken'])->name('token.create');
     Route::post('/token/delete/{token}', [DashboardController::class, 'deleteToken'])->name('token.delete');
+    Route::post('/logout', [DashboardController::class, 'logout'])->name('logout');
 });
 
 
